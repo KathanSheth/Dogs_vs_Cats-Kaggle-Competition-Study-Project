@@ -4,7 +4,16 @@ The dataset contains 25,000 images of dogs and cats. 12500 Images in each class.
 
 As a study project, I have implemented a simple MLP network to complex network like Bottleneck feature extraction, fine-tunnig etc. The idea is to implement different architecture and concept and learn the pipeline with actual example and compare loss and accuracy. 
 
-**NOTE : I have not focused on hyperparameters tunning much as the main idea was to learn the process flow of each concept. Still I tried to train the models untill I get satisfactory results in each part. I was not able to train for long time and could not fine-tune each models because of resource constraints. (I have only CPU and very basic GPU with limited access.)
+**NOTE1 : I have not focused on hyperparameters tunning much as the main idea was to learn the process flow of each concept. Still I tried to train the models untill I get satisfactory results in each part. I was not able to train for long time and could not fine-tune each models because of resource constraints. (I have only CPU and very basic GPU with limited access.)
+
+**NOTE2 : Change the image path accordingly before you run any notebooks.
+Folder structure should look like below.
+
+|-train
+|-test1
+
+I haven' included data and saved model/weights files as they are big files. 
+
 
 I have divided this project in seven notebooks. Below is the brief explanation of each notebook.
 
