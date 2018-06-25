@@ -4,7 +4,7 @@ The dataset contains 25,000 images of dogs and cats. 12500 Images in each class.
 
 As a study project, I have implemented a simple MLP network to complex network like Bottleneck feature extraction, fine-tunnig etc. The idea is to implement different architecture and concept and learn the pipeline with actual example and compare loss and accuracy. 
 
-** NOTE : I have not focused on hyperparameters tunning much as the main idea was to learn the process flow of each concept. Still I tried to train the models untill I get satisfactory results in each part. I was not able to train for long time and could not fine-tune each models because of resource constraints. (I have only CPU and very basic GPU with limited access.)
+**NOTE : I have not focused on hyperparameters tunning much as the main idea was to learn the process flow of each concept. Still I tried to train the models untill I get satisfactory results in each part. I was not able to train for long time and could not fine-tune each models because of resource constraints. (I have only CPU and very basic GPU with limited access.)
 
 I have divided this project in seven notebooks. Below is the brief explanation of each notebook.
 
@@ -34,17 +34,17 @@ Performance (Loss, Accuracy) in this notebook seems okay to me! I could have wor
 
 This notebook is almost same as above notebook. The only difference in this notebook is that I wanted to save all the features upto Freezing layers as this is time-consuming process. Once I saved it, next time I can load these features and train Fully connected layers and fine-tune hyperparameters. This training takes very less time even on CPU (~2min per epoch).
 
-** Here is to mention that, till now I have not explored Keras' ImageDataGenerator class much and the data was not in class-wise subfolders. I have not trained my model using `flow_from_directory` method. After saving `train` and `validation` features in `.npy` file I loaded them again to train FC layer. But then I realized that I don't have labels. Though I have used previous labels while training, I feel that I am doing something wrong here and my training is not correct. **
+**Here is to mention that, till now I have not explored Keras' ImageDataGenerator class much and the data was not in class-wise subfolders. I have not trained my model using `flow_from_directory` method. After saving `train` and `validation` features in `.npy` file I loaded them again to train FC layer. But then I realized that I don't have labels. Though I have used previous labels while training, I feel that I am doing something wrong here and my training is not correct. **
 
 Even if this is not correct or doubtful I have included this notebook here. Next steps are to find the existing issue in current notebook and then use `ImageDataGenerator`s `flow(X,y)` method to train the model. 
 
-** I would consider this notebook as a pending/incorrect. **
+**I would consider this notebook as a pending/incorrect. **
 
 **g)	7_CNN_Fine_Tunning for Dog-Cat dataset Kaggle.ipynb**
 
 In this notebook, I have used VGGNet architecture pre-trained on ImageNet dataset. I have loaded the weights from Part e. Basically, I have used ImageNet dataset weights upto last Convolution layers and trained weights of Fully connected layers. (Here I have saved this complete model in part e). By doing this, I have initialized the proper weights as in fine-tunning process, we cannot initialized random weights. After initializing, I have freezed layers upto 4th Convolution block (Upto 15 layers) and fine-tune last (5th) Convolutional block and FC layers.
 
-** Summary **
+**Summary**
 
 | File - Name                                                                | Validation Loss           | Validation Accuracy  | Saved Model                         |
 |:---------------------------------------------------------------------------|:--------------------------|:---------------------|:------------------------------------|
@@ -57,4 +57,4 @@ In this notebook, I have used VGGNet architecture pre-trained on ImageNet datase
 | 7_CNN_Fine_Tunning for Dog-Cat dataset Kaggle.ipynb                        | 0.0790                    | 96.6400%             | dogs_and_cats_CNN_fine_tuning.h5.   |
 
 
-
+**Reference https://blog.keras.io/building-powerful-image-classification-models-using-very-little-data.html
