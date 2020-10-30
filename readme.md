@@ -17,27 +17,33 @@ I haven' included data and saved model/weights files as they are big files.
 
 I have divided this project in seven notebooks. Below is the brief explanation of each notebook.
 
+
 **a)	1_Simple Neural Network (MLP) for Dog-Cat dataset Kaggle.ipynb**
 
 In this notebook, I have implemented a neural netowrk with two hidden layers with 768 and 384 nodes respectively.
+
 
 **b)	2_CNN for Dog-Cat dataset Kaggle.ipynb**
 
 In this notebook, I have implemented Convolutional Neural Network resembled to LeNet Architecture. 
 
+
 **c)	3_CNN_with_augmented_data for Dog-Cat dataset Kaggle.ipynb**
 
 In this notebook, I have doubled number of images in each class using data augmentation (Vertical flips) and kept the same network as part b.
 
+
 **d)	4_CNN_Feature_Extraction for Dog-Cat dataset Kaggle.ipynb**
 
 In this notebook, I have used VGGNet architecture pre-trained on ImageNet dataset and extracted the last layer features by freezing all the above layer weights.
+
 
 **e)	5_CNN_with_bottleneck_features for Dog-Cat dataset Kaggle (Part1).ipynb**
 
 In this notebook, I have used VGGNet architecture pre-trained on ImageNet dataset. All the weights in Convolution layers are freezed and I have appended my own Fully connected layer and trained it. I will use this weights as a starting point in 7th notebook (Fine-tunning the network)
 
 Performance (Loss, Accuracy) in this notebook seems okay to me! I could have worked with hyperparameters tunning but it was too much time for training so I have kept as it is!
+
 
 **f)	6_CNN_with_bottleneck features for Dog-Cat database Kaggle (Part 2).ipynb**
 
@@ -49,9 +55,11 @@ Even if this is not correct or doubtful I have included this notebook here. Next
 
 **I would consider this notebook as a pending/incorrect. **
 
+
 **g)	7_CNN_Fine_Tunning for Dog-Cat dataset Kaggle.ipynb**
 
 In this notebook, I have used VGGNet architecture pre-trained on ImageNet dataset. I have loaded the weights from Part e. Basically, I have used ImageNet dataset weights upto last Convolution layers and trained weights of Fully connected layers. (Here I have saved this complete model in part e). By doing this, I have initialized the proper weights as in fine-tunning process, we cannot initialized random weights. After initializing, I have freezed layers upto 4th Convolution block (Upto 15 layers) and fine-tune last (5th) Convolutional block and FC layers.
+
 
 **Summary**
 
